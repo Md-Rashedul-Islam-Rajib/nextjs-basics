@@ -1,4 +1,5 @@
 "use client"
+import { getPosts } from '@/lib/getComment';
 import React, { useEffect, useState } from 'react'
 
 interface Post{
@@ -12,8 +13,7 @@ interface Post{
 const Post = () => {
     const [posts, setPosts] = useState([]);
     const data = async () => {
-        const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const data = await res.json();
+        const data = await getPosts();
         setPosts(data);
     }
 

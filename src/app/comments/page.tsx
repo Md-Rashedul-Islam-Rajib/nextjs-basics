@@ -1,5 +1,5 @@
 import React from 'react'
-
+import getComments from "../../lib/getComment"
 const Comments = async () => {
 
     type Comments = {
@@ -10,8 +10,8 @@ const Comments = async () => {
         body: string;
     }
 
-    const comments = await fetch('https://jsonplaceholder.typicode.com/comments');
-    const data = await comments.json();
+    const data = await getComments();
+   
 
 
   return (
