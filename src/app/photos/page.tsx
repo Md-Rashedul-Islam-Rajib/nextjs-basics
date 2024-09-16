@@ -17,7 +17,7 @@ type Photo =
 }
 
   return (
-    <div>
+    <div className='grid grid-cols-4 gap-6'>
       {
         data.map((photo: Photo)=> <div key={photo.id}>
         <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
