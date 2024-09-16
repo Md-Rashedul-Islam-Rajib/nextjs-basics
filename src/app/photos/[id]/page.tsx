@@ -4,7 +4,7 @@ import React from 'react'
 const Details =async ({params}: {params : {id:string}}) => {
     let photo;
     try {
-        const data = await fetch(`https://jsonplaceholder.typicode.com/photos/${params.id}`);
+        const data = await fetch(`https://jsonplaceholder.typicode.com/photos/${params.id}`, {cache: 'no-store'});
         const res = await data.json();
         photo= res;
     } catch (error:any) {
