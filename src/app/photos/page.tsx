@@ -1,4 +1,5 @@
 // import Card from '@/components/Card';
+import { Button } from '@/components/ui/button';
 import getPhoto from '@/lib/getPhoto'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -46,7 +47,7 @@ type Photo =
   </article>
 
   <Link href={`/photos/${photo.id}`}>
-  <button> go to photo</button>
+  <Button> Go to Photo</Button>
   </Link>
       </div>)
       }
